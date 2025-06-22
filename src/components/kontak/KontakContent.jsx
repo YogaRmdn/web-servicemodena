@@ -125,7 +125,7 @@ export default function Kontak() {
       {/* Google Maps */}
       <div className="mt-12">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3943.8492185762516!2d115.2212641!3d-8.7058653!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNDInMjEuMSJTIDExNcKwMTMnMjUuOCJF!5e0!3m2!1sid!2sid!4v1750584670333!5m2!1sid!2sid"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2345.0269642817775!2d115.22268198973302!3d-8.70583519610566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNDInMjEuMSJTIDExNcKwMTMnMjUuOCJF!5e0!3m2!1sid!2sid!4v1750584975586!5m2!1sid!2sid"
           width="100%"
           height="500"
           style={{ border: 0 }}
