@@ -34,10 +34,18 @@ export default function Footer() {
         <div>
           <h3 className="font-bold mb-4">MENU</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="/">&gt; Beranda</a></li>
-            <li><a href="/profil">&gt; Profil</a></li>
-            <li><a href="/layanan">&gt; Layanan</a></li>
-            <li><a href="/kontak">&gt; Kontak</a></li>
+            <li>
+              <a href="/">&gt; Beranda</a>
+            </li>
+            <li>
+              <a href="/profil">&gt; Profil</a>
+            </li>
+            <li>
+              <a href="/layanan">&gt; Layanan</a>
+            </li>
+            <li>
+              <a href="/kontak">&gt; Kontak</a>
+            </li>
           </ul>
         </div>
 
@@ -76,8 +84,8 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="text-center mt-12 text-xs text-gray-400">
-        --- Copyright © {new Date().getFullYear()} Service Kompor Modena - Published
-        by Santri IT ---
+        --- Copyright © {new Date().getFullYear()} Service Kompor Modena -
+        Published by Santri IT ---
       </div>
     </footer>
   );
