@@ -10,13 +10,16 @@ export default function Kontak() {
   });
 
   const [error, setError] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     const newError = {};
     if (!form.nama) newError.nama = "Wajib Diisi";
     if (!form.email) newError.email = "Wajib Diisi";
@@ -24,8 +27,39 @@ export default function Kontak() {
     setError(newError);
 
     if (Object.keys(newError).length === 0) {
-      console.log("Form submitted:", form);
-      alert("Pesan berhasil dikirim!");
+      setIsSubmitting(true);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "1dbf389d-b7c5-41b4-a8f8-2563b971bb90",
+          subject: "Pesan Baru dari Website Service Kompor",
+          nama: form.nama,
+          email: form.email,
+          telepon: form.telepon,
+          alamat: form.alamat,
+          pesan: form.pesan,
+        }),
+      });
+
+      setIsSubmitting(false);
+
+      if (response.ok) {
+        alert("Pesan berhasil dikirim!");
+        setIsSuccess(true);
+        setForm({
+          nama: "",
+          email: "",
+          telepon: "",
+          alamat: "",
+          pesan: "",
+        });
+      } else {
+        alert("Gagal mengirim pesan. Silakan coba lagi.");
+      }
     }
   };
 
@@ -45,6 +79,7 @@ export default function Kontak() {
             placeholder="Nama Anda"
             value={form.nama}
             onChange={handleChange}
+            required
             className={`w-full border rounded-md px-4 py-2 ${
               error.nama ? "border-red-500 bg-blue-50" : "border-gray-300"
             }`}
@@ -64,6 +99,7 @@ export default function Kontak() {
               placeholder="Email Anda"
               value={form.email}
               onChange={handleChange}
+              required
               className={`w-full border rounded-md px-4 py-2 ${
                 error.email ? "border-red-500 bg-blue-50" : "border-gray-300"
               }`}
@@ -80,6 +116,7 @@ export default function Kontak() {
               placeholder="Nomor Telepon Anda"
               value={form.telepon}
               onChange={handleChange}
+              required
               className={`w-full border rounded-md px-4 py-2 ${
                 error.telepon ? "border-red-500 bg-blue-50" : "border-gray-300"
               }`}
@@ -113,12 +150,13 @@ export default function Kontak() {
           />
         </div>
 
-        {/* Tombol Kirim */}
+        {/* Tombol */}
         <button
           type="submit"
+          disabled={isSubmitting}
           className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded"
         >
-          KIRIM PESAN
+          {isSubmitting ? "Mengirim..." : "KIRIM PESAN"}
         </button>
       </form>
 
