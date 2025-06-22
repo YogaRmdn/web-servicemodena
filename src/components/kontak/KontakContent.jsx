@@ -125,7 +125,7 @@ export default function Kontak() {
       {/* Google Maps */}
       <div className="mt-12">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8394091234154!2d119.41802757580572!3d-5.161983252137168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbefc7a6e4dd58b%3A0x17340db4e747212b!2sJl.%20Beringin%20Timur%20STP.%2011%20No.4%2C%20Kassi-Kassi%2C%20Kec.%20Rappocini%2C%20Kota%20Makassar%2C%20Sulawesi%20Selatan%2090221!5e0!3m2!1sid!2sid!4v1719046400000!5m2!1sid!2sid"
+          src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3943.8492185762516!2d115.2212641!3d-8.7058653!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNDInMjEuMSJTIDExNcKwMTMnMjUuOCJF!5e0!3m2!1sid!2sid!4v1750584670333!5m2!1sid!2sid"
           width="100%"
           height="500"
           style={{ border: 0 }}
