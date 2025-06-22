@@ -35,7 +35,7 @@ export default function Footer() {
           <h3 className="font-bold mb-4">MENU</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="/">&gt; Beranda</a></li>
-            <li><a href="/profile">&gt; Profil</a></li>
+            <li><a href="/profil">&gt; Profil</a></li>
             <li><a href="/layanan">&gt; Layanan</a></li>
             <li><a href="/kontak">&gt; Kontak</a></li>
           </ul>
