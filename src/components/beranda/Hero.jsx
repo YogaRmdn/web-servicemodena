@@ -10,11 +10,10 @@ export default function Hero() {
       }}
     >
       <h1 className="text-4xl sm:text-6xl md:text-6xl lg:text-8xl font-bold mb-4 drop-shadow-lg">
-        Service Kompor Gas <br /> Modena
+        Service Center Kompor <br /> Modena
       </h1>
       <p className="text-lg sm:text-xl mb-6 drop-shadow">
-        Kami melayani service berbagai merk kompor seperti: Ariston, Tecnogas,
-        Delizia, Electrolux, Modena, Teka, Domo, Elba, DLL.
+        Kami melayani perbaikan dan pemeliharaan kompor khusus merk Modena. dengan teknisi berpengalaman.
       </p>
       <a
         href="https://wa.me/6281234567890"
